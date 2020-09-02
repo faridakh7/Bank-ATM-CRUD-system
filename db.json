@@ -1,0 +1,34 @@
+{
+  "userList": [
+    {
+      "Hesab nomresi": 111,
+      "Ad": "Farid",
+      "Soyad": "Ahmadov",
+      "Depozit": 1000
+    },
+    {
+      "Hesab nomresi": 222,
+      "Ad": "Nurlan",
+      "Soyad": "Aliyev",
+      "Depozit": 700
+    },
+    {
+      "Hesab nomresi": 333,
+      "Ad": "Yasin",
+      "Soyad": "Ugur",
+      "Depozit": 2000
+    },
+    {
+      "Hesab nomresi": 444,
+      "Ad": "Samir",
+      "Soyad": "Karimov",
+      "Depozit": 1500
+    },
+    {
+      "Hesab nomresi": 555,
+      "Ad": "Ali",
+      "Soyad": "Aliyev",
+      "Depozit": 800
+    }
+  ]
+}
