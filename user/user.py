@@ -9,6 +9,8 @@ def getDataFormJsonFile(_fileName):
 data = getDataFormJsonFile("../db.json")
 
 hesabNomresi = int(input("Hesab nomresin daxil edin:  "))
+
+
 def getProductbyName():
     finder = False
     for db in data['userList']:
@@ -34,13 +36,16 @@ def getProductbyName():
                             drawMoney = int(input("Cəkmək istədiyiniz miqdari daxil edin: "))
                             if db['Depozit'] > drawMoney:
                                 db['Depozit'] = db['Depozit'] - drawMoney
-                            # else:
-                            #     print("Balansinizda o qeder mebleg yoxdur")
-
-                            with open("db.json", "w") as connect:
-                                json.dump(data, connect)
                                 print(f"Hesabinizdan {drawMoney}AZN deyerinde mebleg cixildi!")
-                    drawMoneys()
+
+                            else:
+                                print("Balansinizda o qeder mebleg yoxdur")
+
+
+                            with open("../db.json", mode="w") as connect:
+                                json.dump(data, connect)
+
+                        drawMoneys()
 
                     if option == 3:
                         print("Emr 3")

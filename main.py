@@ -1,5 +1,5 @@
 from admin.admin import  *
-from user.user import  *
+from user.user import *
 
 
 def start():
@@ -15,7 +15,7 @@ Seciminizi Daxil edin:  """).strip()
         option = int(firstCommand)
 
         if option == 1:
-            onlyUser()
+            pass
         if option == 2:
             print("Bankdan qeydiyyatdan keçmək")
         if option == 3:
