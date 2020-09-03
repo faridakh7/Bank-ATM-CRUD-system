@@ -1,8 +1,7 @@
 from admin.admin import *
-from user.user import *
+from closeApp import *
 from register import *
-from  closeApp import *
-
+from user.user import *
 
 
 def start():
@@ -28,6 +27,5 @@ Seciminizi Daxil edin:  """).strip()
     else:
         print("Yalnız 1-4  arası bir secim edə bilərsiniz!")
         start()
-
 
 start()
