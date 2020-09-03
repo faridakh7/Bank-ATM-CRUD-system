@@ -1,4 +1,5 @@
 import json
+from closeApp import *
 def getDataFormJsonFile(_fileName):
     with open(_fileName, "r") as connect:
         return json.load(connect)
@@ -42,7 +43,28 @@ def getProductbyName():
                             with open("db.json", mode="w") as connect:
                                 json.dump(data, connect)
 
+                        def back():
+                            lastEmr = input("""
+                                                          1.Geri Qayitmaq
+                                                          2.Əsas Menuya Qayıtmaq
+                                                          3.Programdan cıxmaq
+
+                                                                  Seciminizi Daxil edin:  """).strip()
+                            if lastEmr.isnumeric() and 0 < int(lastEmr) < 4:
+                                options = int(lastEmr)
+                                if options == 1:
+                                    onlyUser()
+                                if options == 2:
+                                    from main import start
+                                    start()
+                                if options == 3:
+                                    programbitdi()
+                            else:
+                                print("Yalnız 1-3  arası bir secim edə bilərsiniz!")
+                                back()
+
                         drawMoneys()
+                        back()
 
                     if option == 3:
                         def toDepositeMoney():
@@ -69,22 +91,10 @@ def getProductbyName():
                                     from main import start
                                     start()
                                 if options == 3:
-                                    def programbitdi():
-                                        print("Program muveffeqiyyətlə dayandırıldı")
-                                        return
-
                                     programbitdi()
                             else:
                                 print("Yalnız 1-3  arası bir secim edə bilərsiniz!")
                                 back()
-
-
-
-
-
-
-
-
                         toDepositeMoney()
                         back()
 

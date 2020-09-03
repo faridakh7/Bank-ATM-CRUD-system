@@ -1,5 +1,8 @@
 from admin.admin import *
 from user.user import *
+from register import *
+from  closeApp import *
+
 
 
 def start():
@@ -11,20 +14,16 @@ def start():
     4.Çıxış
 
 Seciminizi Daxil edin:  """).strip()
-    if firstCommand.isnumeric() and 0 < int(firstCommand) < 4:
+    if firstCommand.isnumeric() and 0 < int(firstCommand) < 5:
         option = int(firstCommand)
 
         if option == 1:
             getProductbyName()
         if option == 2:
-            print("Bankdan qeydiyyatdan keçmək")
+            userRegister()
         if option == 3:
             control()
         if option == 4:
-            def programbitdi():
-                print("Program muveffeqiyyətlə dayandırıldı")
-                return
-
             programbitdi()
     else:
         print("Yalnız 1-4  arası bir secim edə bilərsiniz!")
