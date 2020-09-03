@@ -1,4 +1,4 @@
-from admin.admin import  *
+from admin.admin import *
 from user.user import *
 
 
@@ -15,7 +15,7 @@ Seciminizi Daxil edin:  """).strip()
         option = int(firstCommand)
 
         if option == 1:
-            pass
+            getProductbyName()
         if option == 2:
             print("Bankdan qeydiyyatdan keçmək")
         if option == 3:
@@ -29,9 +29,6 @@ Seciminizi Daxil edin:  """).strip()
     else:
         print("Yalnız 1-4  arası bir secim edə bilərsiniz!")
         start()
-
-
-
 
 
 start()

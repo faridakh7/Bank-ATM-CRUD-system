@@ -1,17 +1,14 @@
 import json
-
-
 def getDataFormJsonFile(_fileName):
     with open(_fileName, "r") as connect:
         return json.load(connect)
 
 
-data = getDataFormJsonFile("../db.json")
-
-hesabNomresi = int(input("Hesab nomresin daxil edin:  "))
+data = getDataFormJsonFile("db.json")
 
 
 def getProductbyName():
+    hesabNomresi = int(input("\nHesab nomresin daxil edin:  "))
     finder = False
     for db in data['userList']:
         if db['Hesab nomresi'] == hesabNomresi:
@@ -23,13 +20,13 @@ def getProductbyName():
                 3.Depozit Qoymaq
                 4.Geri qayitmaq
 
-            Seciminizi Daxil edin:  """).strip()
+                    Seciminizi Daxil edin:  """).strip()
                 if xususiEmr.isnumeric() and 0 < int(xususiEmr) < 5:
                     option = int(xususiEmr)
 
                     if option == 1:
                         print(
-                            f"\n* Hesab nomresi:{db['Hesab nomresi']}\n* Ad:{db['Ad']}\n* Soyad:{db['Soyad']}\n* Balans:{db['Depozit']} ")
+                            f"\n* Hesab nomresi: {db['Hesab nomresi']}\n* Ad: {db['Ad']}\n* Soyad: {db['Soyad']}\n* Balans: {db['Depozit']} AZN ")
                         onlyUser()
                     if option == 2:
                         def drawMoneys():
@@ -39,17 +36,58 @@ def getProductbyName():
                                 print(f"Hesabinizdan {drawMoney}AZN deyerinde mebleg cixildi!")
 
                             else:
-                                print("Balansinizda o qeder mebleg yoxdur")
+                                print("Balansinizda kifayet qeder mebleg yoxdur")
+                                drawMoneys()
 
-
-                            with open("../db.json", mode="w") as connect:
+                            with open("db.json", mode="w") as connect:
                                 json.dump(data, connect)
 
                         drawMoneys()
 
                     if option == 3:
-                        print("Emr 3")
-                        onlyUser()
+                        def toDepositeMoney():
+                            pushMoney = int(input("Depozit qoymaq istədiyiniz məbləgi daxil edin: "))
+                            db['Depozit'] = db['Depozit'] + pushMoney
+                            print(f"Hesabınıza {pushMoney}AZN əlavə edildi!")
+                            print(f"Balans {db['Depozit']}")
+
+                            with open("db.json", mode="w") as connect:
+                                json.dump(data, connect)
+
+                        def back():
+                            lastEmr = input("""
+                                   1.Geri Qayitmaq
+                                   2.Əsas Menuya Qayıtmaq
+                                   3.Programdan cıxmaq
+
+                                           Seciminizi Daxil edin:  """).strip()
+                            if lastEmr.isnumeric() and 0 < int(lastEmr) < 4:
+                                options = int(lastEmr)
+                                if options == 1:
+                                    onlyUser()
+                                if options == 2:
+                                    from main import start
+                                    start()
+                                if options == 3:
+                                    def programbitdi():
+                                        print("Program muveffeqiyyətlə dayandırıldı")
+                                        return
+
+                                    programbitdi()
+                            else:
+                                print("Yalnız 1-3  arası bir secim edə bilərsiniz!")
+                                back()
+
+
+
+
+
+
+
+
+                        toDepositeMoney()
+                        back()
+
                     if option == 4:
                         from main import start
                         start()
@@ -58,13 +96,9 @@ def getProductbyName():
                     onlyUser()
 
             onlyUser()
-            # print(f"\n* Hesab nomresi:{db['Hesab nomresi']}\n* Ad:{db['Ad']}\n* Soyad:{db['Soyad']}\n* Balans:{db['Depozit']} ")
 
             finder = True
             break
     if finder == False:
         print(f"{hesabNomresi} -axtarişina uygun nəticə tapılmadı")
         getProductbyName()
-
-
-getProductbyName()
