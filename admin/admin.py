@@ -46,7 +46,10 @@ def control():
                 if firstCommand.isnumeric() and 0 < int(firstCommand) < 5:
                     option = int(firstCommand)
                     if option == 1:
-                        pass
+                        for db in data['userList']:
+                            print(
+                                f"* Hesab nomresi: {db['Hesab nomresi']} *  Ad: {db['Ad']}  * Soyad: {db['Soyad']} * Balans: {db['Depozit']}AZN")
+                        back()
                     if option == 2:
                         finder=False
                         idnumb = int(input("Silmək istədiyiniz müştərinin hesab nömrəsini daxil edin:  "))

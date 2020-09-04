@@ -22,7 +22,7 @@ Seciminizi Daxil edin:  """).strip()
         if option == 3:
             control()
         if option == 4:
-            programbitdi()
+            print("Program muveffeqiyyətlə dayandırıldı")
     else:
         print("Yalnız 1-4  arası bir secim edə bilərsiniz!")
         start()

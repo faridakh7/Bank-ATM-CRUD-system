@@ -13,14 +13,14 @@ data = getDataFormJsonFile("db.json")
 
 
 def userRegister():
-    print("Aşağıda Qeyd olunan Formu Doldurun\n")
+    # print("Aşağıda Qeyd olunan Formu Doldurun\n")
     hesabNomresi = int(input("Hesab Nomresini daxil edin:  "))
     finder = False
     for db in data['userList']:
-        if db['Hesab nomresi'] != hesabNomresi:
+        if db['Hesab nomresi'] == hesabNomresi:
             finder = True
             break
-    if finder:
+    if finder == False:
         if hesabNomresi > 99 and hesabNomresi < 999:
 
             regName = input("Adınız:  ")
@@ -66,5 +66,5 @@ def userRegister():
             print("100-999 Arası bir Hesab Nömrəsi əlavə edin")
             userRegister()
     else:
-        print("EYNIDIRRR!!!!")
+        print(f"{hesabNomresi} Nömrəli hesab sistemdə var, Zəhmət olmasa yenisini daxil edin!")
         userRegister()

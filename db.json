@@ -1,1 +1,64 @@
-{"userList": [{"Hesab nomresi": 111, "Ad": "Farid", "Soyad": "Ahmadov", "Depozit": 29162}, {"Hesab nomresi": 222, "Ad": "Nurlan", "Soyad": "Aliyev", "Depozit": 1033}, {"Hesab nomresi": 333, "Ad": "Yasin", "Soyad": "Ugur", "Depozit": 2000}, {"Hesab nomresi": 444, "Ad": "Samir", "Soyad": "Karimov", "Depozit": 1500}, {"Hesab nomresi": 555, "Ad": "Ali", "Soyad": "Aliyev", "Depozit": 800}, {"Hesab nomresi": 666, "Ad": "Nuru", "Soyad": "Penahov", "Depozit": 777}, {"Hesab nomresi": 777, "Ad": "dsd", "Soyad": "ssf", "Depozit": 222}, {"Hesab nomresi": 888, "Ad": "sdasd", "Soyad": "asdad", "Depozit": 888}, {"Hesab nomresi": 999, "Ad": "adad", "Soyad": "adad", "Depozit": 22}, {"Hesab nomresi": 123, "Ad": "dsd", "Soyad": "sdsd", "Depozit": 232}]}
+{
+  "userList": [
+    {
+      "Hesab nomresi": 111,
+      "Ad": "Farid",
+      "Soyad": "Ahmadov",
+      "Depozit": 29162
+    },
+    {
+      "Hesab nomresi": 222,
+      "Ad": "Nurlan",
+      "Soyad": "Aliyev",
+      "Depozit": 1033
+    },
+    {
+      "Hesab nomresi": 333,
+      "Ad": "Yasin",
+      "Soyad": "Ugur",
+      "Depozit": 2000
+    },
+    {
+      "Hesab nomresi": 444,
+      "Ad": "Samir",
+      "Soyad": "Karimov",
+      "Depozit": 1500
+    },
+    {
+      "Hesab nomresi": 555,
+      "Ad": "Ali",
+      "Soyad": "Aliyev",
+      "Depozit": 800
+    },
+    {
+      "Hesab nomresi": 666,
+      "Ad": "Nuru",
+      "Soyad": "Penahov",
+      "Depozit": 777
+    },
+    {
+      "Hesab nomresi": 777,
+      "Ad": "dsd",
+      "Soyad": "ssf",
+      "Depozit": 222
+    },
+    {
+      "Hesab nomresi": 888,
+      "Ad": "sdasd",
+      "Soyad": "asdad",
+      "Depozit": 888
+    },
+    {
+      "Hesab nomresi": 999,
+      "Ad": "adad",
+      "Soyad": "adad",
+      "Depozit": 22
+    },
+    {
+      "Hesab nomresi": 123,
+      "Ad": "dsd",
+      "Soyad": "sdsd",
+      "Depozit": 232
+    }
+  ]
+}
