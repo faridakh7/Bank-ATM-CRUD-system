@@ -1,5 +1,4 @@
 from admin.admin import *
-from closeApp import *
 from register import *
 from user.user import *
 
@@ -27,5 +26,6 @@ Seciminizi Daxil edin:  """).strip()
     else:
         print("Yalnız 1-4  arası bir secim edə bilərsiniz!")
         start()
+
 
 start()
